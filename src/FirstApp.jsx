@@ -1,3 +1,4 @@
+
 // Ponerlo fuera no se renderiza nuevamente y está encapsulado en el componente
 const newMessage = {
     message: 'Hola Mundo',
@@ -20,7 +21,7 @@ export const FirstApp = ( { title, subTitle } ) => {
             <code>{ JSON.stringify( newMessage ) }</code>
             <h1>{ title }</h1>
             {/* No puede ser una función async, ni una promesa */}
-            <h1> { getSaludo() } </h1>
+            {/* <h1> { getSaludo() } </h1> */}
             <p>{ subTitle }</p>
         </>
     );
