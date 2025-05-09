@@ -9,7 +9,8 @@ const getSaludo = () => {
     return `Hola, Jhonnatan`;
 }
 
-export const FirstApp = () => {
+// Las props son los parametros que recibe el componente desde el padre, comunmente se destructuran al definirla en la función.
+export const FirstApp = ( { title, subTitle } ) => {
 
     // Si una función depende de valores de dentro de esta función se debe declarar acá.
 
@@ -17,9 +18,10 @@ export const FirstApp = () => {
         // Definición de un fragmento sin necesidad de importar
         <>
             <code>{ JSON.stringify( newMessage ) }</code>
+            <h1>{ title }</h1>
             {/* No puede ser una función async, ni una promesa */}
             <h1> { getSaludo() } </h1>
-            <p>Soy un subtitulo</p>
+            <p>{ subTitle }</p>
         </>
     );
 }
